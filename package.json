@@ -1,0 +1,59 @@
+{
+  "name": "lumen",
+  "version": "1.0.0",
+  "description": "Lumen - Synthèse vocale & Lecteur musical avec Electron",
+  "homepage": "http://localhost",
+  "main": "electron/main.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "electron .",
+    "dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
+    "build": "npm run build:app && npm run build:electron",
+    "build:app": "echo 'Build frontend si Vite configuré'",
+    "build:electron": "electron-builder",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder -p always"
+  },
+  "keywords": [
+    "electron",
+    "music",
+    "tts",
+    "speech-synthesis"
+  ],
+  "author": "Lumen",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^42.4.1",
+    "electron-builder": "latest"
+  },
+  "build": {
+    "appId": "com.lumen.app",
+    "productName": "Lumen",
+    "directories": {
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**/*",
+      "dist/**/*",
+      "library/**/*",
+      "package.json"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "build/icon.png",
+      "category": "Audio"
+    },
+    "deb": {
+      "depends": [
+        "libnotify4"
+      ],
+      "maintainer": "Lumen Team"
+    },
+    "appImage": {
+      "category": "Audio"
+    }
+  }
+}
