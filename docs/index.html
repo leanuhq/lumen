@@ -19,10 +19,18 @@
     <script src="./electron-polyfill.js"></script>
     <script type="module" src="./assets/index-CRSh7w8H.js"></script>
     <link rel="stylesheet" href="./assets/index-B6N98JAa.css" />
-    <link rel="stylesheet" href="./iphone.css" />
+    <link rel="stylesheet" href="./iphone.css?v=3" />
 
     <style>
       html, body { background: #0d0d0d; color: #f3f3f3; margin: 0; }
+      @media (max-width: 860px) {
+        .sidebar { display: none !important; }
+        .embed-stage--empty { display: none !important; }
+        .app { display: flex !important; flex-direction: column !important; height: 100dvh !important; overflow: hidden !important; }
+        .main-col { order: 1; flex: 1 1 auto; min-height: 0; overflow: hidden; }
+        .app__left { order: 2; flex: 0 0 auto; max-height: none !important; }
+        .player-bar { order: 3; flex: 0 0 auto; }
+      }
       #boot-fallback {
         display: none;
         min-height: 100vh;
