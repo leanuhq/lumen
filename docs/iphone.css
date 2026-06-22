@@ -142,21 +142,7 @@ body {
   .player-bar__title {
     font-size: 0.82rem !important;
   }
-
-  .player-bar__progress {
-    max-width: none !important;
-    width: 100% !important;
-  }
-
-  .player-bar__volume {
-    margin-left: 0 !important;
-  }
-
-  .volume-slider {
-    width: min(68px, 18vw) !important;
-    min-width: 52px !important;
-  }
-
+  
   .player-bar__wave {
     display: none !important;
   }
@@ -330,4 +316,87 @@ body {
   .track-row__sub {
     display: none !important;
   }
+}
+/* ===== Player iPhone ===== */
+
+.player-bar__volume,
+.volume-slider,
+.player-bar__wave,
+.player-bar__volume-label{
+  display:none !important;
+}
+
+
+.player-bar__row2{
+
+  display:flex !important;
+
+  justify-content:center !important;
+
+  align-items:center !important;
+
+  gap:16px !important;
+
+  flex-wrap:nowrap !important;
+
+}
+
+
+.player-bar__control{
+
+  width:36px !important;
+
+  height:36px !important;
+
+}
+
+
+.player-bar__control--play{
+
+  width:48px !important;
+
+  height:48px !important;
+
+  border-radius:999px !important;
+
+  background:#1ed760 !important;
+
+}
+
+
+.player-bar__inner{
+
+  padding:
+  .45rem
+  .75rem
+  calc(.45rem + env(safe-area-inset-bottom,0px))
+  !important;
+
+}
+
+
+/* barre verte */
+
+.player-bar__progress{
+
+  width:100% !important;
+
+  margin-top:6px !important;
+
+}
+
+
+.player-bar__progress input{
+
+  accent-color:#1ed760 !important;
+
+}
+
+
+/* cache le texte 100% */
+
+.player-bar__volume-text{
+
+  display:none !important;
+
 }
