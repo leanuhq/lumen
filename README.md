@@ -22,3 +22,4 @@ Sur iPhone : ouvrir l’URL dans Safari → Partager → **Sur l’écran d’ac
 - `npm start` — lance l’app Electron
 - `npm run dev` — Electron avec URL de dev (port 3000)
 - `npm run dist` — build installateur Linux
+# lumen
