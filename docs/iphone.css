@@ -470,26 +470,53 @@ body {
 
 }
 
-/* ===== Convertisseur ===== */
+/* ===== Convertisseur iPhone ===== */
 
 @media (max-width:860px){
 
+.sheet,
+.sheet--narrow{
+
+    width:calc(100vw - 24px) !important;
+
+    max-width:none !important;
+
+    left:12px !important;
+
+    right:12px !important;
+
+    margin:0 !important;
+
+    padding:20px !important;
+
+    border-radius:24px !important;
+
+}
+
+
+.sheet__header{
+
+    margin-bottom:18px !important;
+
+}
+
+
+.sheet__title{
+
+    font-size:32px !important;
+
+}
+
+
 .toolbar{
+
+    display:flex !important;
 
     flex-direction:column !important;
 
     gap:12px !important;
 
 }
-
-
-
-.toolbar__url{
-
-    width:100% !important;
-
-}
-
 
 
 .toolbar__url-block{
@@ -499,77 +526,36 @@ body {
 }
 
 
-
-.input{
+.toolbar__url{
 
     width:100% !important;
 
 }
 
+
+.input{
+
+    width:100% !important;
+
+    font-size:16px !important;
+
+}
 
 
 .btn{
 
     width:100% !important;
 
-}
-
-
-
-.yt-search-box{
-
-    padding:12px !important;
+    min-height:52px !important;
 
 }
 
 
-
-.yt-search-box__fields{
-
-    display:flex !important;
-
-    flex-direction:column !important;
-
-    gap:10px !important;
-
-}
-
-
-
-.yt-search-box__btn{
+.btn--primary{
 
     width:100% !important;
 
 }
-
-
-
-.track-row{
-
-    flex-direction:column !important;
-
-    align-items:flex-start !important;
-
-}
-
-
-
-.track-row__menu-btn{
-
-    width:100% !important;
-
-    margin-top:8px !important;
-
-}
-
-
-
-.sheet{
-
-    width:95vw !important;
-
-}
-
 
 
 }
