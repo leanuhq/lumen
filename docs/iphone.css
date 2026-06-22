@@ -474,41 +474,33 @@ body {
 
 @media (max-width:860px){
 
-.sheet,
-.sheet--narrow{
+.sheet{
 
     width:calc(100vw - 24px) !important;
 
     max-width:none !important;
 
-    left:12px !important;
+    max-height:55vh !important;
 
-    right:12px !important;
+    overflow-y:auto !important;
 
-    margin:0 !important;
+    padding:18px !important;
 
-    padding:20px !important;
-
-    border-radius:24px !important;
+    border-radius:24px 24px 0 0 !important;
 
 }
 
 
-.sheet__header{
+.sheet__intro{
 
-    margin-bottom:18px !important;
+    font-size:15px !important;
 
-}
-
-
-.sheet__title{
-
-    font-size:32px !important;
+    line-height:1.4 !important;
 
 }
 
 
-.toolbar{
+.toolbar__url{
 
     display:flex !important;
 
@@ -519,39 +511,55 @@ body {
 }
 
 
-.toolbar__url-block{
+.toolbar__url .input{
 
     width:100% !important;
 
 }
 
 
-.toolbar__url{
+.toolbar__url .btn{
 
     width:100% !important;
 
 }
 
 
-.input{
+.toolbar__url-extras{
 
-    width:100% !important;
+    display:flex !important;
 
-    font-size:16px !important;
+    flex-direction:column !important;
 
-}
-
-
-.btn{
-
-    width:100% !important;
-
-    min-height:52px !important;
+    gap:14px !important;
 
 }
 
 
-.btn--primary{
+.format-segment__options{
+
+    display:flex !important;
+
+    gap:8px !important;
+
+}
+
+
+.format-segment__pill{
+
+    flex:1 !important;
+
+}
+
+
+.format-segment__label{
+
+    font-size:15px !important;
+
+}
+
+
+.toolbar__url-extras>.btn{
 
     width:100% !important;
 
