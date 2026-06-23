@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" 
+    <meta name="viewport"
           content="width=device-width,
           initial-scale=1,
           maximum-scale=1,
@@ -28,7 +28,7 @@
 
     <style>
       html, body { background: #0d0d0d; color: #f3f3f3; margin: 0; }
-      @media (max-width: 100%) {
+      @media (max-width: 860px) {
         .sidebar { display: none !important; }
         .embed-stage--empty { display: none !important; }
         .app { display: flex !important; flex-direction: column !important; height: 100dvh !important; overflow: hidden !important; }
@@ -62,65 +62,55 @@
           fallback.style.display = "block";
         }
       }, 8000);
-    </script<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport"  
-          content="width=device-width,
-          initial-scale=1,
-          maximum-scale=1,
-          user-scalable=no,
-          viewport-fit=cover" />
-    <title>Lumen</title>
-
-    <meta name="theme-color" content="#1ed760" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="Lumen" />
-    <meta name="format-detection" content="telephone=no" />
-
-    <link rel="manifest" href="./manifest.json" />
-    <link rel="icon" href="./icon.png" />
-    <link rel="apple-touch-icon" href="./icon.png" />
-
-    <script src="./electron-polyfill.js"></script>
-    <script type="module" src="./assets/index-CRSh7w8H.js"></script>
-    <link rel="stylesheet" href="./assets/index-B6N98JAa.css" />
-    <link rel="stylesheet" href="./iphone.css?v=3" />
-
-    <style>
-      html, body { background: #0d0d0d; color: #f3f3f3; margin: 0; }
-      
-      #boot-fallback {
-        display: none;
-        min-height: 100dvh;
-        padding: 2rem 1.25rem;
-        box-sizing: border-box;
-        font-family: system-ui, -apple-system, sans-serif;
-        text-align: center;
-      }
-      #boot-fallback h1 { margin: 0 0 .75rem; font-size: 1.4rem; }
-      #boot-fallback p { margin: 0; color: #a4a4a4; line-height: 1.5; }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <div id="boot-fallback" role="alert">
-      <h1>Lumen n'a pas pu démarrer</h1>
-      <p>Vérifie que le site est servi en HTTPS et que le dossier <strong>dist/</strong> est bien publié.<br />Recharge la page ou rouvre l'app depuis Safari.</p>
-    </div>
-    <script>
-      window.setTimeout(function () {
-        var root = document.getElementById("root");
-        var fallback = document.getElementById("boot-fallback");
-        if (fallback && root && !root.childElementCount) {
-          fallback.style.display = "block";
-        }
-      }, 8000);
     </script>
-  </body>
-</html>
+
+    <script>
+    (function () {
+      function ready(fn) {
+        if (document.readyState !== 'loading') fn();
+        else document.addEventListener('DOMContentLoaded', fn);
+      }
+
+      ready(function () {
+        var tries = 0;
+        var interval = setInterval(function () {
+          var left = document.querySelector('.app__left');
+          if (left || tries > 100) {
+            clearInterval(interval);
+            if (left) initFab(left);
+          }
+          tries++;
+        }, 100);
+      });
+
+      function initFab(left) {
+        if (document.querySelector('.sidebar-mobile-fab')) return;
+
+        var fab = document.createElement('button');
+        fab.type = 'button';
+        fab.className = 'sidebar-mobile-fab';
+        fab.setAttribute('aria-label', 'Gérer les playlists');
+        fab.textContent = '+';
+        document.body.appendChild(fab);
+
+        function close() {
+          left.classList.remove('sidebar-mobile-open');
+          fab.textContent = '+';
+        }
+        function open() {
+          left.classList.add('sidebar-mobile-open');
+          fab.textContent = '×';
+        }
+
+        left.addEventListener('click', function (e) {
+          if (e.target === left) close();
+        });
+
+        fab.addEventListener('click', function () {
+          left.classList.contains('sidebar-mobile-open') ? close() : open();
+        });
+      }
+    })();
+    </script>
   </body>
 </html>
