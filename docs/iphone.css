@@ -18,23 +18,18 @@ body {
 }
 
 @media (max-width: 860px) {
-  .app .app__left .sidebar {
+  .app {
     display: flex !important;
     flex-direction: column !important;
-    width: 100% !important;
-    padding: 0.6rem 0.7rem !important;
-    gap: 0.5rem !important;
-    background: #0f0f0f !important;
-    border-top: 1px solid var(--border-subtle) !important;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+    height: 100dvh !important;
+    height: -webkit-fill-available !important;
+    min-height: 100dvh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
   }
 
-  /* on garde la liste des playlists et le logo cachés : 
-     ils existent déjà via l'écran Accueil / la barre du bas */
-  .app .app__left .sidebar__brand,
-  .app .app__left .sidebar__lists {
-    display: none !important;
-  }
-}
   .main-col {
     order: 1 !important;
     flex: 1 1 auto !important;
@@ -319,177 +314,4 @@ body {
 
   .player-bar {
     background: #111 !important;
-    border-top: 1px solid rgba(255, 255, 255, .08);
-    padding: 10px 12px 14px 12px !important;
-  }
-
-  .player-bar__row1 {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-  }
-
-  .player-bar__title {
-    font-size: 14px !important;
-    font-weight: 500 !important;
-  }
-
-  .player-bar__progress::after {
-    content: "100%";
-    color: #d9d9d9;
-    font-size: 14px;
-  }
-
-  .player-bar__embed-note {
-    display: none !important;
-  }
-
-  .player-bar__row2 {
-    margin-top: 8px !important;
-  }
-
-  .player-bar__controls {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 18px !important;
-  }
-
-  .btn--sm,
-  .player-bar__sep,
-  .player-bar__volume {
-    display: none !important;
-  }
-
-  .player-bar__controls .btn--round {
-    width: 34px !important;
-    height: 34px !important;
-    padding: 0 !important;
-  }
-
-  .player-bar__controls .btn--primary {
-    width: 46px !important;
-    height: 46px !important;
-    border-radius: 50% !important;
-    background: #1ed760 !important;
-  }
-
-  .player-bar__inner::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 4px;
-    margin-top: 10px;
-    border-radius: 999px;
-    background: #1ed760;
-  }
-
-  .toolbar__url {
-    flex-direction: column !important;
-  }
-
-  .toolbar__url .input {
-    width: 100% !important;
-  }
-
-  .toolbar__url .btn {
-    width: 100% !important;
-  }
-
-  .toolbar__url-extras {
-    flex-direction: column !important;
-  }
-
-  .format-segment {
-    width: 100% !important;
-  }
-
-  .format-segment__options {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-  }
-}
-
-@media (max-width: 860px) {
-  .sheet {
-    width: 100vw !important;
-    max-width: none !important;
-    height: 92dvh !important;
-    max-height: none !important;
-    margin: 0 !important;
-    border-radius: 20px 20px 0 0 !important;
-  }
-
-  .toolbar__url {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
-  }
-
-  .toolbar__url .input {
-    width: 100% !important;
-  }
-
-  .toolbar__url .btn {
-    width: 100% !important;
-  }
-
-  .toolbar__url-extras {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
-  }
-
-  .format-segment {
-    width: 100% !important;
-  }
-}
-
-.stats-container {
-  display: block !important;
-  width: 100% !important;
-}
-
-.stats-view__grid {
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  gap: 12px !important;
-}
-
-.stats-card {
-  padding: 16px !important;
-  border-radius: 16px;
-}
-
-.stats-view__top {
-  margin-top: 20px;
-}
-
-.profile-view {
-  overflow-y: auto;
-  padding-bottom: 120px;
-}
-
-.stats-container,
-.stats-view {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-.stats-view__grid {
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  gap: 12px !important;
-}
-
-.stats-card {
-  padding: 16px !important;
-  border-radius: 16px;
-}
-
-.profile-view {
-  overflow-y: auto !important;
-  padding-bottom: 120px !important;
-}
+    border-top: 1px solid rgba(255,
