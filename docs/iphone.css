@@ -72,13 +72,35 @@ body {
     border-bottom: none !important;
   }
 
-  .nav-rail__logo {
-    display: none !important;
-  }
+@media (max-width:860px){
 
-  .nav-rail__pdp-btn {
-    display: none !important;
-  }
+.toolbar__url{
+    flex-direction:column !important;
+}
+
+.toolbar__url .input{
+    width:100% !important;
+}
+
+.toolbar__url .btn{
+    width:100% !important;
+}
+
+.toolbar__url-extras{
+    flex-direction:column !important;
+}
+
+.format-segment{
+    width:100% !important;
+}
+
+.format-segment__options{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:8px !important;
+}
+
+}
 
   .nav-rail__list {
     flex-direction: row !important;
@@ -471,100 +493,204 @@ body {
 
 }
 
-/* ===== Convertisseur iPhone ===== */
+@media (max-width:860px){
+
+.toolbar__url{
+    flex-direction:column !important;
+}
+
+.toolbar__url .input{
+    width:100% !important;
+}
+
+.toolbar__url .btn{
+    width:100% !important;
+}
+
+.toolbar__url-extras{
+    flex-direction:column !important;
+}
+
+.format-segment{
+    width:100% !important;
+}
+
+.format-segment__options{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:8px !important;
+}
+
+}
+
+}
+.stats-container{
+
+display:block!important;
+
+width:100%!important;
+
+}
+
+
+.stats-view__grid{
+
+display:grid!important;
+
+grid-template-columns:1fr!important;
+
+gap:12px!important;
+
+}
+
+
+.stats-card{
+
+padding:16px!important;
+
+border-radius:16px;
+
+}
+
+
+.stats-view__top{
+
+margin-top:20px;
+
+}
+
+
+.profile-view{
+
+overflow-y:auto;
+
+padding-bottom:120px;
+
+}
+@media (max-width:860px){
+
+.sheet{
+
+width:100vw !important;
+
+max-width:none !important;
+
+height:92dvh !important;
+
+max-height:none !important;
+
+margin:0 !important;
+
+border-radius:20px 20px 0 0 !important;
+
+}
+
+.toolbar__url{
+display:flex !important;
+flex-direction:column !important;
+gap:12px !important;
+}
+
+.toolbar__url .input{
+width:100% !important;
+}
+
+.toolbar__url .btn{
+width:100% !important;
+}
+
+.toolbar__url-extras{
+display:flex !important;
+flex-direction:column !important;
+gap:12px !important;
+}
+
+.format-segment{
+width:100% !important;
+}
+
+}
 
 @media (max-width:860px){
 
 .sheet{
 
-    width:calc(100vw - 24px) !important;
+width:100vw !important;
 
-    max-width:none !important;
+max-width:none !important;
 
-    max-height:55vh !important;
+height:92dvh !important;
 
-    overflow-y:auto !important;
+max-height:none !important;
 
-    padding:18px !important;
+margin:0 !important;
 
-    border-radius:24px 24px 0 0 !important;
-
-}
-
-
-.sheet__intro{
-
-    font-size:15px !important;
-
-    line-height:1.4 !important;
+border-radius:20px 20px 0 0 !important;
 
 }
-
 
 .toolbar__url{
-
-    display:flex !important;
-
-    flex-direction:column !important;
-
-    gap:12px !important;
-
+display:flex !important;
+flex-direction:column !important;
+gap:12px !important;
 }
-
 
 .toolbar__url .input{
-
-    width:100% !important;
-
+width:100% !important;
 }
-
 
 .toolbar__url .btn{
-
-    width:100% !important;
-
+width:100% !important;
 }
-
 
 .toolbar__url-extras{
+display:flex !important;
+flex-direction:column !important;
+gap:12px !important;
+}
 
-    display:flex !important;
+.format-segment{
+width:100% !important;
+}
 
-    flex-direction:column !important;
+}
 
-    gap:14px !important;
+.stats-container,
+.stats-view{
+
+display:block!important;
+
+visibility:visible!important;
+
+opacity:1!important;
 
 }
 
 
-.format-segment__options{
+.stats-view__grid{
 
-    display:flex !important;
+display:grid!important;
 
-    gap:8px !important;
+grid-template-columns:1fr!important;
 
-}
-
-
-.format-segment__pill{
-
-    flex:1 !important;
+gap:12px!important;
 
 }
 
 
-.format-segment__label{
+.stats-card{
 
-    font-size:15px !important;
+padding:16px!important;
 
-}
-
-
-.toolbar__url-extras>.btn{
-
-    width:100% !important;
+border-radius:16px;
 
 }
 
+
+.profile-view{
+
+overflow-y:auto!important;
+
+padding-bottom:120px!important;
 
 }
