@@ -15,6 +15,7 @@ body {
   overscroll-behavior: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+  overscroll-behavior: none;
 }
 
 @media (max-width: 860px) {
