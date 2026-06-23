@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport"
+    <meta name="viewport" 
           content="width=device-width,
           initial-scale=1,
           maximum-scale=1,
@@ -28,7 +28,7 @@
 
     <style>
       html, body { background: #0d0d0d; color: #f3f3f3; margin: 0; }
-      @media (max-width: 860px) {
+      @media (max-width: 100%) {
         .sidebar { display: none !important; }
         .embed-stage--empty { display: none !important; }
         .app { display: flex !important; flex-direction: column !important; height: 100dvh !important; overflow: hidden !important; }
@@ -62,55 +62,4 @@
           fallback.style.display = "block";
         }
       }, 8000);
-    </script>
-
-    <script>
-    (function () {
-      function ready(fn) {
-        if (document.readyState !== 'loading') fn();
-        else document.addEventListener('DOMContentLoaded', fn);
-      }
-
-      ready(function () {
-        var tries = 0;
-        var interval = setInterval(function () {
-          var left = document.querySelector('.app__left');
-          if (left || tries > 100) {
-            clearInterval(interval);
-            if (left) initFab(left);
-          }
-          tries++;
-        }, 100);
-      });
-
-      function initFab(left) {
-        if (document.querySelector('.sidebar-mobile-fab')) return;
-
-        var fab = document.createElement('button');
-        fab.type = 'button';
-        fab.className = 'sidebar-mobile-fab';
-        fab.setAttribute('aria-label', 'Gérer les playlists');
-        fab.textContent = '+';
-        document.body.appendChild(fab);
-
-        function close() {
-          left.classList.remove('sidebar-mobile-open');
-          fab.textContent = '+';
-        }
-        function open() {
-          left.classList.add('sidebar-mobile-open');
-          fab.textContent = '×';
-        }
-
-        left.addEventListener('click', function (e) {
-          if (e.target === left) close();
-        });
-
-        fab.addEventListener('click', function () {
-          left.classList.contains('sidebar-mobile-open') ? close() : open();
-        });
-      }
-    })();
-    </script>
-  </body>
-</html>
+    </script
